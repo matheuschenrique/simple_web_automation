@@ -1,0 +1,149 @@
+<!-- Simple form website based on:
+* https://github.com/Larissakich/Formulario
+* https://www.codingnepalweb.com/multi-step-form-html-css-javascript/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/progress-bar.css">
+    <script src="https://kit.fontawesome.com/35f5fd6bf8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="assets/img/undraw_fill_form_re_cwyf.svg" alt="">
+            <div class="progress-bar">
+                <div class="step">
+                    <p>Step 1</p>
+                    <div class="bullet">
+                        <span>1</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Step 2</p>
+                    <div class="bullet">
+                        <span>2</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Review</p>
+                    <div class="bullet">
+                        <span>3</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Registration</h1>
+                    </div>
+                </div>
+                <div class="page page1 active">
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="name">Product Name</label>
+                            <input type="text" name="name" id="name" placeholder="Type the product name" required>
+                            <span class="error-message" id="errorName"></span>
+                        </div>
+                        
+                        <div class="input-box">
+                            <label for="price">Product Price</label>
+                            <input type="text" name="price" id="price" placeholder="Type the price" required>
+                            <span class="error-message" id="errorPrice"></span>
+                        </div>
+                        
+                        <div class="input-box">
+                            <label for="quantity">Quantity</label>
+                            <input type="text" name="quantity" id="quantity" placeholder="Type the quantity" required>
+                            <span class="error-message" id="errorQuantity"></span>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="code">Product Code</label>
+                            <input type="text" name="code" id="code" placeholder="Type the code" required>
+                            <span class="error-message" id="errorCode"></span>
+                        </div>
+                            
+                    </div>
+
+                    <div class="next-button">
+                        <button id="nextBtn1" type="button">Next</button>
+                    </div>
+                </div>
+
+                <div class="page page2">
+                    <div class="input-box">
+                        <label for="description">Description</label>
+                        <input type="text" name="description" id="description" placeholder="Type the description" required>
+                        <span class="error-message" id="errorDescription"></span>
+                    </div>  
+
+                    <div class="type-inputs">
+                        <div class="type-title">
+                            <h6>Type</h6>
+                        </div>
+                        <div class="type-group">
+                            <div class="type-input">
+                                <input type="radio" name="type" id="book">
+                                <label for="book">Book</label>
+                            </div>
+                            <div class="type-input">
+                                <input type="radio" name="type" id="electronics">
+                                <label for="electronics">Electronics</label>
+                            </div>
+                            <div class="type-input">
+                                <input type="radio" name="type" id="clothing">
+                                <label for="clothing">Clothing</label>
+                            </div>
+                            <div class="type-input">
+                                <input type="radio" name="type" id="food">
+                                <label for="food">Food</label>
+                            </div>
+                            <div class="type-input">
+                                <input type="radio" name="type" id="other">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                        <span class="error-message" id="errorTypeGroup"></span>
+                    </div>
+
+                    <div class="previous-next-button">
+                        <button id="prevBtn2" type="button">Previous</button>
+                        <button id="nextBtn2" type="button">Next</button>
+                    </div>
+                </div>
+
+                <div class="page page3">
+                    <div class="review">
+                        <div id="reviewName"></div>
+                        <div id="reviewPrice"></div>
+                        <div id="reviewQuantity"></div>
+                        <div id="reviewCode"></div>
+                        <div id="reviewDescription"></div>
+                        <div id="reviewType"></div>
+                    </div>
+
+                    <div class="send-button">
+                        <button id="prevBtn3" type="button">Previous</button>
+                        <button id="sendBtn">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+    
+</body>
+
+</html>
